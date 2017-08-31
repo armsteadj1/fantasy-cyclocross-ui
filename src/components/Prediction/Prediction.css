@@ -9,3 +9,9 @@
     /* symbol for "collapsed" panels */
     content: "\e080";    /* adjust as needed, taken from bootstrap.css */
 }
+
+.panel-heading a { 
+    width: 100%;
+    height: 100%;
+    display: block
+}
