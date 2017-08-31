@@ -14,6 +14,15 @@ export class Prediction extends Component {
       racers: [],
     };
   }
+  
+  getImage(person) {
+    const images = {
+      'Joe PetersenRasmussen Bike Shop': 'https://bargeek.files.wordpress.com/2009/03/pbr_can.jpg',
+      'Chad DonahueRasmussen Bike Shop': 'http://image.redbull.com/rbx00264/0100/0/406/products/packshots/en_GB/Red-Bull-Energy-Drink-Can-UK.png',
+    };
+    
+    return images[person];
+  }
 
   getRacers(id) {
     return new Promise(resolve => {
@@ -28,12 +37,15 @@ export class Prediction extends Component {
         const data = cheerio.load(response);
         const racerRows = data('table').find('tr');
         racerRows.each((i, r) => {
+            const name = data(r).find('td:nth-child(2)').text();
+            const team = data(r).find('td:nth-child(3)').text();
             racers.push({
               rank: data(r).find('td:nth-child(1)').text(),
-              name: data(r).find('td:nth-child(2)').text(),
-              team: data(r).find('td:nth-child(3)').text(),
+              name,
+              team,
               location: data(r).find('td:nth-child(4)').text(),
               points: data(r).find('td:nth-child(5)').text(),
+              image: this.getImage(name+team),
             });
         });
         
@@ -94,7 +106,7 @@ export class Prediction extends Component {
             <tr>
               <th>Points</th>
               <th>Name</th>
-             <th>Team</th>
+              <th>Team</th>
               <th className="hidden-xs" >Location</th>
             </tr>
             </thead>
@@ -102,7 +114,7 @@ export class Prediction extends Component {
             {this.state.racers.find(f => f.id === r.id).racers.map(racer =>
               <tr>
                 <td>{racer.points}</td>
-                <td>{racer.name}</td>
+                <td>{racer.name} {racer.image ?? `<img src="${racer.image}" />`}</td>
                 <td>{racer.team}</td>
                 <td className="hidden-xs" >{racer.location}</td>
               </tr>)}
