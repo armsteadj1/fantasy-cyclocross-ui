@@ -78,33 +78,36 @@ export class Prediction extends Component {
     );
   }
 
+  spinner { 
+    return (<Row><Col className="text-center"><FontAwesome name="circle-o-notch" className="font-awesome-large" spin /></Col></Row>);
+  }
+  
   render() {
     return (<Accordion>
-      {this.state.races.length === 0 && 
-        <Row><Col className="text-center"><FontAwesome name="circle-o-notch" className="font-awesome-large" spin /></Col></Row>
-      }
+      {this.state.races.length === 0 && this.spinner()}
       {this.state.races.length !== 0 && this.state.races.map((r, i) => 
       <Panel header={`${r.name} ${this.state.racers.find(f => f.id === r.id) ? `(${this.state.racers.find(f => f.id === r.id).racers.length} racers)` : ''}`} eventKey={i}>
-        <Table striped bordered condensed hover responsive >
-          <thead>
-          <tr>
-            <th>Points</th>
-            <th>Name</th>
-            <th>Team</th>
-            <th className="hidden-xs" >Location</th>
-          </tr>
-          </thead>
-          <tbody>
-          {this.state.racers.find(f => f.id === r.id) &&
-          this.state.racers.find(f => f.id === r.id).racers.map(racer =>
+        {!this.state.racers.find(f => f.id === r.id) && this.spinner()} 
+        {this.state.racers.find(f => f.id === r.id) && 
+          <Table striped bordered condensed hover responsive >
+            <thead>
             <tr>
-              <td>{racer.points}</td>
-              <td>{racer.name}</td>
-              <td>{racer.team}</td>
-              <td className="hidden-xs" >{racer.location}</td>
-            </tr>)}
-          </tbody>
-        </Table>
+              <th>Points</th>
+              <th>Name</th>
+             <th>Team</th>
+              <th className="hidden-xs" >Location</th>
+            </tr>
+            </thead>
+            <tbody>
+            {this.state.racers.find(f => f.id === r.id).racers.map(racer =>
+              <tr>
+                <td>{racer.points}</td>
+                <td>{racer.name}</td>
+                <td>{racer.team}</td>
+                <td className="hidden-xs" >{racer.location}</td>
+              </tr>)}
+            </tbody>
+          </Table>}
 
       </Panel>)}
       </Accordion>
