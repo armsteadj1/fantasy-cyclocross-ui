@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import './App.css';
 import { Prediction } from './components/Prediction/Prediction';
-import { Results } from './components/Results/Results';
 
 class App extends Component {
   render() {
