@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 import React, { Component } from 'react';
-import FontAwesome from 'react-fontawesom';
+import FontAwesome from 'react-fontawesome';
 import { Accordion, Panel, Table } from 'react-bootstrap';
 import rp from 'request-promise';
 import "./Prediction.css";
