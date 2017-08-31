@@ -1,7 +1,8 @@
 import * as cheerio from 'cheerio';
 import React, { Component } from 'react';
-import { Panel, Table } from 'react-bootstrap';
+import { Accordion, Panel, Table } from 'react-bootstrap';
 import rp from 'request-promise';
+import "./Prediction.css";
 
 export class Prediction extends Component {
   constructor(props, context) {
@@ -51,13 +52,14 @@ export class Prediction extends Component {
         const data = cheerio.load(response);
         const raceTables = data('table').find('td').find('table');
         raceTables.each((i, r) => {
+          const date = data(r).find('td:nth-child(1)').text();
           const gender = data(r).find('td:nth-child(3)').text();
           const race = data(r).find('td:nth-child(4)').text();
           const id = data(r).parent().parent().next().attr('id').substring(3);
 
           races.push({
             id,
-            name: `${gender} - ${race}`,
+            name: `${date} - ${gender} - ${race}`,
           });
         });
 
@@ -75,8 +77,8 @@ export class Prediction extends Component {
   }
 
   render() {
-    return (<span>
-      {this.state.races.map(r => <Panel header={r.name} >
+    return (<Accordion>
+      {this.state.races.map((r, i) => <Panel header={r.name} eventKey={i}>
         <Table striped bordered condensed hover responsive >
           <thead>
           <tr>
@@ -99,7 +101,7 @@ export class Prediction extends Component {
         </Table>
 
       </Panel>)}
-      </span>
+      </Accordion>
     );
   }
 }
