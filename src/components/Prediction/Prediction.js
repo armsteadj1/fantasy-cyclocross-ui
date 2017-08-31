@@ -84,7 +84,7 @@ export class Prediction extends Component {
         <Row><Col className="text-center"><FontAwesome name="circle-o-notch" className="font-awesome-large" spin /></Col></Row>
       }
       {this.state.races.length !== 0 && this.state.races.map((r, i) => 
-      <Panel header={`${r.name} - ${this.state.racers.find(f => f.id === r.id) && this.state.racers.find(f => f.id === r.id).racers.length} racers`} eventKey={i}>
+      <Panel header={`${r.name} - ${this.state.racers.find(f => f.id === r.id) && `${this.state.racers.find(f => f.id === r.id).racers.length} racers`}`} eventKey={i}>
         <Table striped bordered condensed hover responsive >
           <thead>
           <tr>
