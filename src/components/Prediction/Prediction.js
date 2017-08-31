@@ -15,11 +15,10 @@ export class Prediction extends Component {
   getRacers(id) {
     return new Promise(resolve => {
       rp({
-        uri: `https://api.usacx.co/myusac/include/registration.php?pagename=registration&race=${id}&mode=predictor`,
+        uri: `https://api.usacx.co/predictions?race=${id}`,
         headers: {
           accept: 'application/json',
           'content-type': 'application/json',
-          'x-stomething': 'no'
         },
       }).then(response => {
         const racers = [];
@@ -42,11 +41,10 @@ export class Prediction extends Component {
 
   componentDidMount() {
     rp({
-      uri: 'https://api.usacx.co/myusac/include/registration.php?eventid=1526&year=2017&mode=registrations',
+      uri: 'https://api.usacx.co/registration-races?eventid=1526&year=2017',
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
-        'x-stomething': 'no'
       },
     }).then(response => {
         const races = [];
