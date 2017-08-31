@@ -37,7 +37,7 @@ export class Prediction extends Component {
             });
         });
         
-        resolve(racers.filter(r => r.name !=== ""));
+        resolve(racers.filter(r => r.name !== ""));
       });
     });
   }
