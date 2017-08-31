@@ -78,7 +78,7 @@ export class Prediction extends Component {
     );
   }
 
-  spinner { 
+  spinner() { 
     return (<Row><Col className="text-center"><FontAwesome name="circle-o-notch" className="font-awesome-large" spin /></Col></Row>);
   }
   
