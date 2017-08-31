@@ -114,7 +114,7 @@ export class Prediction extends Component {
             {this.state.racers.find(f => f.id === r.id).racers.map(racer =>
               <tr>
                 <td>{racer.points}</td>
-                <td>{racer.name} {racer.image && <img src="{racer.image}" height="20px" />}</td>
+                <td>{racer.name} {racer.image && <img src={racer.image} height="20px" />}</td>
                 <td>{racer.team}</td>
                 <td className="hidden-xs" >{racer.location}</td>
               </tr>)}
