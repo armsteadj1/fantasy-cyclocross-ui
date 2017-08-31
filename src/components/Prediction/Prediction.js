@@ -28,7 +28,6 @@ export class Prediction extends Component {
         const data = cheerio.load(response);
         const racerRows = data('table').find('tr');
         racerRows.each((i, r) => {
-          if(data(r).find('td:nth-child(1)').text().trim() !== "") {
             racers.push({
               rank: data(r).find('td:nth-child(1)').text(),
               name: data(r).find('td:nth-child(2)').text(),
@@ -36,10 +35,9 @@ export class Prediction extends Component {
               location: data(r).find('td:nth-child(4)').text(),
               points: data(r).find('td:nth-child(5)').text(),
             });
-          }
         });
-
-        resolve(racers);
+        
+        resolve(racers.filter(r => r.name !=== ""));
       });
     });
   }
