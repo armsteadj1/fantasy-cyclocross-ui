@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio';
 import React, { Component } from 'react';
+import FontAwesome from 'react-fontawesom';
 import { Accordion, Panel, Table } from 'react-bootstrap';
 import rp from 'request-promise';
 import "./Prediction.css";
@@ -78,7 +79,8 @@ export class Prediction extends Component {
 
   render() {
     return (<Accordion>
-      {this.state.races.map((r, i) => <Panel header={r.name} eventKey={i}>
+      {this.state.races.length === 0 ?? <FontAwesome name="fa-circle-o-notch" spin />}
+      {this.state.races.length !== 0 && this.state.races.map((r, i) => <Panel header={r.name} eventKey={i}>
         <Table striped bordered condensed hover responsive >
           <thead>
           <tr>
