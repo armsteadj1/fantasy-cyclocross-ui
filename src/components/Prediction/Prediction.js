@@ -4,8 +4,8 @@ import { Panel, Table } from 'react-bootstrap';
 import rp from 'request-promise';
 
 export class Prediction extends Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.state = {
       races: [],
       racers: [],
@@ -15,8 +15,12 @@ export class Prediction extends Component {
   getRacers(id) {
     return new Promise(resolve => {
       rp({
-        uri: `http://localhost:3000/myusac/include/registration.php?pagename=registration&race=${id}&mode=predictor`,
-        headers: { accept: 'application/json' },
+        uri: `https://api.usacx.co/myusac/include/registration.php?pagename=registration&race=${id}&mode=predictor`,
+        headers: {
+          accept: 'application/json',
+          'content-type': 'application/json',
+          'x-stomething': 'no'
+        },
       }).then(response => {
         const racers = [];
         const data = cheerio.load(response);
@@ -38,8 +42,12 @@ export class Prediction extends Component {
 
   componentDidMount() {
     rp({
-      uri: 'http://localhost:3000/myusac/include/registration.php?eventid=1526&year=2017&mode=registrations',
-      headers: { accept: 'application/json' },
+      uri: 'https://api.usacx.co/myusac/include/registration.php?eventid=1526&year=2017&mode=registrations',
+      headers: {
+        accept: 'application/json',
+        'content-type': 'application/json',
+        'x-stomething': 'no'
+      },
     }).then(response => {
         const races = [];
         const data = cheerio.load(response);
