@@ -2,6 +2,7 @@
   "name": "usacx",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://mvobqm4mf3.execute-api.us-west-2.amazonaws.com/Production",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "cheerio": "^1.0.0-rc.2",

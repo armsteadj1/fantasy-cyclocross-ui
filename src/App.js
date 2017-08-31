@@ -12,7 +12,7 @@ class App extends Component {
           <div className="container-fluid">
             <Row>
               <Col xs={12} mdOffset={1} md={10}>
-                <Results />
+                <Prediction />
               </Col>
             </Row>
           </div>
