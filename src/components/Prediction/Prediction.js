@@ -26,15 +26,17 @@ export class Prediction extends Component {
       }).then(response => {
         const racers = [];
         const data = cheerio.load(response);
-        const racerRows = data('table').find('tr').slice(2);
+        const racerRows = data('table').find('tr');
         racerRows.each((i, r) => {
-          racers.push({
-            rank: data(r).find('td:nth-child(1)').text(),
-            name: data(r).find('td:nth-child(2)').text(),
-            team: data(r).find('td:nth-child(3)').text(),
-            location: data(r).find('td:nth-child(4)').text(),
-            points: data(r).find('td:nth-child(5)').text(),
-          })
+          if(data(r).find('td:nth-child(1)').text() !=== ") {
+            racers.push({
+              rank: data(r).find('td:nth-child(1)').text(),
+              name: data(r).find('td:nth-child(2)').text(),
+              team: data(r).find('td:nth-child(3)').text(),
+              location: data(r).find('td:nth-child(4)').text(),
+              points: data(r).find('td:nth-child(5)').text(),
+            });
+          }
         });
 
         resolve(racers);
@@ -84,7 +86,7 @@ export class Prediction extends Component {
         <Row><Col className="text-center"><FontAwesome name="circle-o-notch" className="font-awesome-large" spin /></Col></Row>
       }
       {this.state.races.length !== 0 && this.state.races.map((r, i) => 
-      <Panel header={`${r.name} - ${this.state.racers.find(f => f.id === r.id) ? `${this.state.racers.find(f => f.id === r.id).racers.length} racers` : ''}`} eventKey={i}>
+      <Panel header={`${r.name} ${this.state.racers.find(f => f.id === r.id) ? `(${this.state.racers.find(f => f.id === r.id).racers.length} racers)` : ''}`} eventKey={i}>
         <Table striped bordered condensed hover responsive >
           <thead>
           <tr>
