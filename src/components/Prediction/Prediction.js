@@ -28,7 +28,7 @@ export class Prediction extends Component {
         const data = cheerio.load(response);
         const racerRows = data('table').find('tr');
         racerRows.each((i, r) => {
-          if(data(r).find('td:nth-child(1)').text() !== "") {
+          if(data(r).find('td:nth-child(1)').text().trim() !== "") {
             racers.push({
               rank: data(r).find('td:nth-child(1)').text(),
               name: data(r).find('td:nth-child(2)').text(),
