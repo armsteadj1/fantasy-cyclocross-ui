@@ -24,24 +24,25 @@ export class StateRaces extends Component {
           <Navbar header={`${race.name} [ ${race.city} ]`} >
            <Navbar.Header>
             <Navbar.Brand>
-              <Link to={`/races/${race.year}/${race.id}/prediction`} >{`${race.name} [ ${race.city} ]`} - <small>{race.date}</small></Link>
+               {race.id 
+                 ? <Link to={`/races/${race.year}/${race.id}/prediction`} >{`${race.name} [ ${race.city} ]`} - <small><small><small>{race.date}</small></small></small></Link>
+                 : {`${race.name} [ ${race.city} ]`} - <small><small><small>{race.date}</small></small></small>
+              }
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
-            <Nav>
-              <Nav pullRight>
               {race.id &&
-                <span>
+                <Nav pullRight>
                   <NavItem target="_blank" href={`https://www.usacycling.org/events/getflyer.php?permit=${race.year}-${race.id}`}>Flyer</NavItem>
                   <NavItem target="_blank" href={`https://www.usacycling.org/register/${race.year}-${race.id}`}>Register</NavItem>
-                </span>
+                </Nav>
               }
               {!race.id &&
-                <Navbar.Text className="no-permit">This race currently has no permit.</Navbar.Text>
+                <Nav pullRight>
+                  <Navbar.Text className="no-permit">This race currently has no permit.</Navbar.Text>
+                </Nav>
               }
-              </Nav>
-            </Nav>
           </Navbar.Collapse>
           </Navbar>
           )}
