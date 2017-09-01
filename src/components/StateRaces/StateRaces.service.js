@@ -19,7 +19,7 @@ export const getRaces = (state, year) =>
         const name = data(r).text();
         const raceData = data(r).parent().html().split('<br>');
         const city = raceData.filter(d => d.includes(state))[ 0 ].trim();
-        const date = raceData.filter(d => d.includes(year) && !d.includes('Permit'))[ 0 ].trim();
+        const date = raceData.filter(d => d.includes(`/${year}`) && !d.includes('Permit'))[ 0 ].trim();
         const permitData = raceData[ 1 ].replace('Permit Number: ', '').replace('&#xA0;&#xA0;', '').trim();
         let id;
 
