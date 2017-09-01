@@ -1,0 +1,6 @@
+{
+  "transform": {
+    ".*": "<rootDir>/node_modules/jest-css-modules"
+  },
+  "setupTestFrameworkScriptFile": "<rootDir>/node_modules/jest-enzyme/lib/index.js"
+}
