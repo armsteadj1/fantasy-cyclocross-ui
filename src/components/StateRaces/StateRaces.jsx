@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Spinner } from '../Spinner/Spinner';
 import './StateRaces.css';
