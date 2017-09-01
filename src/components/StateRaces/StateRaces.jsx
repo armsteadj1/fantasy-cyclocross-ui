@@ -18,7 +18,7 @@ export class StateRaces extends Component {
   
   render() {
     return (
-      <span>
+      <Row><Col xs={12} md={10} mdOffset={1}>
         {this.state.races.length === 0 && <Spinner />}
           {this.state.races.map(race => 
           <Navbar header={`${race.name} [ ${race.city} ]`} >
@@ -46,7 +46,7 @@ export class StateRaces extends Component {
           </Navbar.Collapse>
           </Navbar>
           )}
-      </span>
+      </Col></Row>
     );
   }
 }
