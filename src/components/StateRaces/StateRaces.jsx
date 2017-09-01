@@ -18,14 +18,14 @@ export class StateRaces extends Component {
   
   render() {
     return (
-      <Row><Col xs={12} md={10} mdOffset={1}>
+      <Row><Col xs={12} md={12} lg={10} lgOffset={1}>
         {this.state.races.length === 0 && <Spinner />}
           {this.state.races.map(race => 
           <Navbar header={`${race.name} [ ${race.city} ]`} >
            <Navbar.Header>
             <Navbar.Brand>
                {race.id 
-                 ? <Link to={`/races/${race.year}/${race.id}/prediction`} >{`${race.name} [ ${race.city} ]`} - <small><small><small>{race.date}</small></small></small></Link>
+                 ? <Link to={`/races/${race.year}/${race.id}/prediction`} >{`${race.name}`} <small><small><small> - [ ${race.city} ] - {race.date}</small></small></small></Link>
                  : <span>{`${race.name} [ ${race.city} ]`} - <small><small><small>{race.date}</small></small></small></span>
               }
             </Navbar.Brand>
