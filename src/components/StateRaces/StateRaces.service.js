@@ -4,7 +4,7 @@ import rp from 'request-promise';
 export const getRaces = (state, year) =>
   new Promise(resolve => {
     rp({
-      uri: `https://api.usacx.co/races/cyclocross?state=${state}`,
+      uri: `https://api.usacx.co/races/cyclocross?state=${state}&fyear=${year}`,
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
