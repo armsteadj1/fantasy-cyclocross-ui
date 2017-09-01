@@ -34,9 +34,7 @@ export class StateRaces extends Component {
           <Navbar.Collapse>
               {race.id &&
                 <Nav pullRight>
-                  <NavItem>
-                    <Link to={`/races/${race.year}/${race.id}/prediction`} >Registrations</Link>
-                  </NavItem>
+                  <NavItem href={`/races/${race.year}/${race.id}/prediction`} >Registrations</NavItem>
                   <NavItem target="_blank" href={`https://www.usacycling.org/events/getflyer.php?permit=${race.year}-${race.id}`}>Flyer</NavItem>
                   <NavItem target="_blank" href={`https://www.usacycling.org/register/${race.year}-${race.id}`}>Register</NavItem>
                 </Nav>
