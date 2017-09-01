@@ -24,16 +24,25 @@ export class StateRaces extends Component {
           <Navbar header={`${race.name} [ ${race.city} ]`} >
            <Navbar.Header>
             <Navbar.Brand>
+              <span className="hidden-xs">
                {race.id 
                  ? <Link to={`/races/${race.year}/${race.id}/prediction`} >{`${race.name}`} <small><small><small> - [ {race.city} ] - {race.date}</small></small></small></Link>
                  : <span>{`${race.name}`} <small><small><small> - [ {race.city} ] - {race.date}</small></small></small></span>
               }
+              </span>
+              <span className="visible-xs-*">
+               {race.id 
+                 ? <Link to={`/races/${race.year}/${race.id}/prediction`} >{`${race.name}`}</Link>
+                 : <span>{`${race.name}`}</span>
+              }
+              </span>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
               {race.id &&
                 <Nav pullRight>
+                  <Navbar.Text className="visible-xs-*><small><small><small>[ {race.city} ] - {race.date}</small></small></small></Navbar.Text>
                   <NavItem href={`/races/${race.year}/${race.id}/prediction`} >Registrations</NavItem>
                   <NavItem target="_blank" href={`https://www.usacycling.org/events/getflyer.php?permit=${race.year}-${race.id}`}>Flyer</NavItem>
                   <NavItem target="_blank" href={`https://www.usacycling.org/register/${race.year}-${race.id}`}>Register</NavItem>
@@ -41,6 +50,7 @@ export class StateRaces extends Component {
               }
               {!race.id &&
                 <Nav pullRight>
+                  <Navbar.Text className="visible-xs-*><small><small><small>[ {race.city} ] - {race.date}</small></small></small></Navbar.Text>
                   <Navbar.Text className="no-permit">This race currently has no permit.</Navbar.Text>
                 </Nav>
               }
