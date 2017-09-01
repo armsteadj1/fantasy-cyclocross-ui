@@ -26,7 +26,7 @@ export class StateRaces extends Component {
             <Navbar.Brand>
                {race.id 
                  ? <Link to={`/races/${race.year}/${race.id}/prediction`} >{`${race.name} [ ${race.city} ]`} - <small><small><small>{race.date}</small></small></small></Link>
-                 : {`${race.name} [ ${race.city} ]`} - <small><small><small>{race.date}</small></small></small>
+                 : <span>{`${race.name} [ ${race.city} ]`} - <small><small><small>{race.date}</small></small></small></span>
               }
             </Navbar.Brand>
             <Navbar.Toggle />
