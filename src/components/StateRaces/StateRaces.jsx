@@ -25,7 +25,7 @@ export class StateRaces extends Component {
            <Navbar.Header>
             <Navbar.Brand>
                {race.id 
-                 ? <Link to={`/races/${race.year}/${race.id}/prediction`} >{`${race.name}`} <small><small><small> - [ ${race.city} ] - {race.date}</small></small></small></Link>
+                 ? <Link to={`/races/${race.year}/${race.id}/prediction`} >{`${race.name}`} <small><small><small> - [ {race.city} ] - {race.date}</small></small></small></Link>
                  : <span>{`${race.name} [ ${race.city} ]`} - <small><small><small>{race.date}</small></small></small></span>
               }
             </Navbar.Brand>
@@ -34,6 +34,9 @@ export class StateRaces extends Component {
           <Navbar.Collapse>
               {race.id &&
                 <Nav pullRight>
+                  <NavItem>
+                    <Link to={`/races/${race.year}/${race.id}/prediction`} >Registrations</Link>
+                  </NavItem>
                   <NavItem target="_blank" href={`https://www.usacycling.org/events/getflyer.php?permit=${race.year}-${race.id}`}>Flyer</NavItem>
                   <NavItem target="_blank" href={`https://www.usacycling.org/register/${race.year}-${race.id}`}>Register</NavItem>
                 </Nav>
