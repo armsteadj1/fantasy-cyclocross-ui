@@ -42,7 +42,7 @@ export class StateRaces extends Component {
           <Navbar.Collapse>
               {race.id &&
                 <Nav pullRight>
-                  <Navbar.Text className="visible-xs-*><small><small><small>[ {race.city} ] - {race.date}</small></small></small></Navbar.Text>
+                  <Navbar.Text className="visible-xs-*"><small><small><small>[ {race.city} ] - {race.date}</small></small></small></Navbar.Text>
                   <NavItem href={`/races/${race.year}/${race.id}/prediction`} >Registrations</NavItem>
                   <NavItem target="_blank" href={`https://www.usacycling.org/events/getflyer.php?permit=${race.year}-${race.id}`}>Flyer</NavItem>
                   <NavItem target="_blank" href={`https://www.usacycling.org/register/${race.year}-${race.id}`}>Register</NavItem>
@@ -50,7 +50,7 @@ export class StateRaces extends Component {
               }
               {!race.id &&
                 <Nav pullRight>
-                  <Navbar.Text className="visible-xs-*><small><small><small>[ {race.city} ] - {race.date}</small></small></small></Navbar.Text>
+                  <Navbar.Text className="visible-xs-*"><small><small><small>[ {race.city} ] - {race.date}</small></small></small></Navbar.Text>
                   <Navbar.Text className="no-permit">This race currently has no permit.</Navbar.Text>
                 </Nav>
               }
