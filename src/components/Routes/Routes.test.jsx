@@ -3,6 +3,7 @@ import React from 'react';
 import { Switch } from 'react-router';
 import { Prediction } from '../Prediction/Prediction';
 import { Routes } from './Routes';
+import { StateRaces } from '../StateRaces/StateRaces';
 
 let component;
 beforeEach(() => {
@@ -15,6 +16,11 @@ it('has a route for home', () => {
 });
 
 it('has a route for predictions', () => {
-  expect(component.childAt(1).props().path).toEqual('/races/:year/:id');
+  expect(component.childAt(1).props().path).toEqual('/races/:year/:id/prediction');
   expect(component.childAt(1).props().component).toEqual(Prediction);
+});
+
+it('has a route for state races', () => {
+  expect(component.childAt(2).props().path).toEqual('/state/:state/races');
+  expect(component.childAt(2).props().component).toEqual(StateRaces);
 });
