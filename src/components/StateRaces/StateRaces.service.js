@@ -12,10 +12,18 @@ export const getRaces = (state, year) =>
     }).then(response => {
       const data = cheerio.load(response);
       const raceRows = data('table').find('.homearticlebody').find('b:nth-child(1)');
-      const racesData = raceRows.filter((i, r) => !data(r).text().includes('Event is not yet permitted'));
-      const races = [];
+      raceRows.each(r => console.log(data(r).text()))
+      const racesData = raceRows.map((i, r) => {
+        if(!data(r).text().includes('Event is not yet permitted') && !data(r).text().includes('View Results')) {
+          return {
+            r,
+            completed: data(raceRows[i + 1]).text().includes('View Results')
+          };
+        }
+      });
 
-      racesData.map((i, r) => {
+      const races = [];
+      racesData.map((i, {r, complete}) => {
         const name = data(r).text();
         const raceData = data(r).parent().html().split('<br>');
         const city = raceData.filter(d => d.includes(state))[ 0 ].trim();
@@ -27,7 +35,7 @@ export const getRaces = (state, year) =>
           id = permitData.split('-')[ 1 ];
         }
 
-        races.push({ year, id, name, date, city });
+        races.push({ year, id, name, date, city, complete });
       });
       resolve(races);
     });

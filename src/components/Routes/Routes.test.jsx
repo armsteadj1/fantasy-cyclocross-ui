@@ -4,6 +4,7 @@ import { Switch } from 'react-router';
 import { Prediction } from '../Prediction/Prediction';
 import { Routes } from './Routes';
 import { StateRaces } from '../StateRaces/StateRaces';
+import { States } from '../States/States';
 
 let component;
 beforeEach(() => {
@@ -12,7 +13,7 @@ beforeEach(() => {
 
 it('has a route for home', () => {
   expect(component.childAt(0).props().path).toEqual('/');
-  expect(component.childAt(0).props().component).toEqual(Prediction);
+  expect(component.childAt(0).props().component).toEqual(States);
 });
 
 it('has a route for predictions', () => {
