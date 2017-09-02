@@ -1,8 +1,8 @@
 import React from 'react';
+import { Route, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from '../App/App';
 import { Prediction } from '../Prediction/Prediction';
-import { Route, Switch } from 'react-router';
 import { StateRaces } from '../StateRaces/StateRaces';
 import { States } from '../States/States';
 

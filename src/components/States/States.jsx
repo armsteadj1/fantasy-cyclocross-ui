@@ -1,10 +1,18 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 import { Col, Row } from 'react-bootstrap';
 import { StateButton } from './StateButton/StateButton';
 import './States.css';
 
 export const States = () => (
   <span>
+  <Row>
+      <Col className="text-center important-info">
+        Be awesome, checkout a state's cyclocross races <FontAwesome name="hand-o-down" />
+        <br />
+        <br />
+      </Col>
+    </Row>
   <Row className="state-row" >
     <Col md={3} sm={6} xs={12} >
       <StateButton name="ALABAMA" abbreviation="al" />

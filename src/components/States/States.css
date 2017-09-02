@@ -5,3 +5,8 @@
 .state-row {
     margin-bottom: 20px;
 }
+
+.important-info {
+    font-size: 20px;
+    font-weight: bold;
+}

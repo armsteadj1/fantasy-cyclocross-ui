@@ -1,10 +1,10 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import { Switch } from 'react-router';
+import { Home } from '../Home/Home';
 import { Prediction } from '../Prediction/Prediction';
-import { Routes } from './Routes';
 import { StateRaces } from '../StateRaces/StateRaces';
-import { States } from '../States/States';
+import { Routes } from './Routes';
 
 let component;
 beforeEach(() => {
@@ -13,7 +13,7 @@ beforeEach(() => {
 
 it('has a route for home', () => {
   expect(component.childAt(0).props().path).toEqual('/');
-  expect(component.childAt(0).props().component).toEqual(States);
+  expect(component.childAt(0).props().component).toEqual(Home);
 });
 
 it('has a route for predictions', () => {
