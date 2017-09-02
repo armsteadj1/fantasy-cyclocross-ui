@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Col, Nav, Navbar, NavItem, Row } from 'react-bootstrap';
+import FontAwesome from 'react-fontawesome';
 import { Link } from 'react-router-dom';
+import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 import { Spinner } from '../Spinner/Spinner';
 import './StateRaces.css';
 import { getRaces } from './StateRaces.service';
-import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 
 export class StateRaces extends Component {
   constructor(props, context) {
@@ -19,19 +20,23 @@ export class StateRaces extends Component {
 
   render() {
     let state = this.props.match.params.state;
+
     return (
       <span>
         <Breadcrumbs state={state} />
       <Row>
         <Col xs={12} md={12} lg={10} lgOffset={1} >
         {this.state.races.length === 0 && <Spinner />}
-          {this.state.races.map(race =>
-            <Navbar header={`${race.name} [ ${race.city} ]`} >
+          {this.state.races.map(race => {
+            let url = `/states/${state}/races/${race.year}/${race.id}/${race.complete ? 'results' : 'prediction'}`;
+            return (<Navbar header={`${race.name} [ ${race.city} ]`} >
               <Navbar.Header>
                 <Navbar.Brand>
               <span className="hidden-xs" >
                {race.id
-                 ? <Link to={`/states/${state}/races/${race.year}/${race.id}/prediction`} >{`${race.name}`}
+                 ? <Link to={url} >
+                   {race.complete && <span><FontAwesome name="check-square" />&nbsp;&nbsp;</span> }
+                   {`${race.name}`}
                    <small>
                      <small>
                        <small> - [ {race.city} ] - {race.date}</small>
@@ -43,8 +48,12 @@ export class StateRaces extends Component {
                }
               </span>
                   <span className="visible-xs" >
+
                {race.id
-                 ? <Link to={`/states/${state}/races/${race.year}/${race.id}/prediction`} >{`${race.name}`}</Link>
+                 ? <Link to={url} >
+                   {race.complete && <span><FontAwesome name="check-square" />&nbsp;&nbsp;</span> }
+                   {`${race.name}`}
+                 </Link>
                  : <span>{`${race.name}`}</span>
                }
               </span>
@@ -55,10 +64,10 @@ export class StateRaces extends Component {
                 {race.id &&
                 <Nav pullRight >
                   <NavItem className="visible-xs" >[ {race.city} ] - {race.date}</NavItem>
-                  <NavItem href={`/states/${state}/races/${race.year}/${race.id}/prediction`} >Registrations</NavItem>
+                  <NavItem href={url}>{race.complete ? 'Results' : 'Registraions'}</NavItem>
                   <NavItem target="_blank"
                            href={`https://www.usacycling.org/events/getflyer.php?permit=${race.year}-${race.id}`} >Flyer</NavItem>
-                  <NavItem target="_blank" href={`https://www.usacycling.org/register/${race.year}-${race.id}`} >Register</NavItem>
+                  {!race.complete && <NavItem target="_blank" href={`https://www.usacycling.org/register/${race.year}-${race.id}`} >Register</NavItem>}
                 </Nav>
                 }
                 {!race.id &&
@@ -68,8 +77,8 @@ export class StateRaces extends Component {
                 </Nav>
                 }
               </Navbar.Collapse>
-            </Navbar>
-          )}
+            </Navbar>);
+          })}
       </Col></Row>
       </span>
     );

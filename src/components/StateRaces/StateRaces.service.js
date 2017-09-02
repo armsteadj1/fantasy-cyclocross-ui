@@ -16,7 +16,7 @@ export const getRaces = (state, year) =>
         if(!data(r).text().includes('Event is not yet permitted') && !data(r).text().includes('View Results')) {
           return {
             r,
-            completed: data(raceRows[i + 1]).text().includes('View Results')
+            complete: data(raceRows[i + 1]).text().includes('View Results')
           };
         }
       });
