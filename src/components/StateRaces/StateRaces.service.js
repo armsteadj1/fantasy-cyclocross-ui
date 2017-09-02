@@ -12,7 +12,6 @@ export const getRaces = (state, year) =>
     }).then(response => {
       const data = cheerio.load(response);
       const raceRows = data('table').find('.homearticlebody').find('b:nth-child(1)');
-      raceRows.each(r => console.log(data(r).text()))
       const racesData = raceRows.map((i, r) => {
         if(!data(r).text().includes('Event is not yet permitted') && !data(r).text().includes('View Results')) {
           return {
