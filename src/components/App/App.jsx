@@ -3,9 +3,11 @@ import { Col, Row } from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome';
 import './App.css';
 import logo from './logo.png';
+import { Analytics } from './Analytics/Analytics';
 
 export const App = ({ children }) => (
   <div className="container-fluid" >
+    <Analytics />
     <Row>
       <Col xs={6} xsOffset={3} sm={4} smOffset={4} >
         <img src={logo} className="logo img-responsive" />
