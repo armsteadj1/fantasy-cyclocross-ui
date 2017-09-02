@@ -32,28 +32,30 @@ export const getRacers = (id) =>
 export const getRaces = (year, id) =>
   new Promise(resolve => {
     rp({
-    uri: `https://api.usacx.co/registration-races?eventid=${id}&year=${year}`,
-    headers: {
-      accept: 'application/json',
-      'content-type': 'application/json',
-    },
-  }).then(response => {
-      const races = [];
-      const data = cheerio.load(response);
-      const raceTables = data('table').find('td').find('table');
-      raceTables.each((i, r) => {
-        const date = data(r).find('td:nth-child(1)').text();
-        const gender = data(r).find('td:nth-child(3)').text();
-        const race = data(r).find('td:nth-child(4)').text();
-        const id = data(r).parent().parent().next().attr('id').substring(3);
+      uri: `https://api.usacx.co/registration-races?eventid=${id}&year=${year}`,
+      headers: {
+        accept: 'application/json',
+        'content-type': 'application/json',
+      },
+    }).then(response => {
+        const races = [];
+        const data = cheerio.load(response);
+        const raceTables = data('table').find('td').find('table');
+        const name = data('table').find('td:nth-child(1)')
+          .find('b').text().replace('Current registrations for ', '').replace('Riders', '').split(':')[ 0 ];
+        raceTables.each((i, r) => {
+          const date = data(r).find('td:nth-child(1)').text();
+          const gender = data(r).find('td:nth-child(3)').text();
+          const race = data(r).find('td:nth-child(4)').text();
+          const id = data(r).parent().parent().next().attr('id').substring(3);
 
-        races.push({
-          id,
-          name: `${date} - ${gender} - ${race}`,
+          races.push({
+            id,
+            name: `${date} - ${gender} - ${race}`,
+          });
         });
-      });
 
-      resolve(races);
-    }
-  );
-});
+        resolve({ races, name });
+      }
+    );
+  });

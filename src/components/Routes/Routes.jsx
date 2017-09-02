@@ -11,8 +11,9 @@ export const Routes = props => (
     <App>
       <Switch>
         <Route exact path="/" component={States} />
-        <Route exact path="/races/:year/:id/prediction" component={Prediction} />
-        <Route exact path="/state/:state/races" component={StateRaces} />
+        <Route exact path="/states" component={States} />
+        <Route exact path="/states/:state/races/:year/:id/prediction" component={Prediction} />
+        <Route exact path="/states/:state/races" component={StateRaces} />
       </Switch>
     </App>
   </BrowserRouter>

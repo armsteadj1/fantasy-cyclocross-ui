@@ -4,6 +4,7 @@ import { Spinner } from '../Spinner/Spinner';
 import './Prediction.css';
 import { getRacers, getRaces } from './Prediction.service';
 import { PredictionRaces } from './PredictionRaces/PredictionRaces';
+import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 
 export class Prediction extends Component {
   constructor(props, context) {
@@ -21,9 +22,9 @@ export class Prediction extends Component {
 
   componentDidMount() {
     getRaces(this.props.match.params.year, this.props.match.params.id).then(races => {
-      this.setState({ races });
+      this.setState({ races: races.races, name: races.name });
 
-      races.forEach(i => {
+      races.races.forEach(i => {
         getRacers(i.id).then(racers => {
           const currentRacers = this.state.racers;
           currentRacers.push({ id: i.id, racers });
@@ -35,6 +36,8 @@ export class Prediction extends Component {
 
   render() {
     return (
+      <span>
+      <Breadcrumbs state={this.props.match.params.state} race={this.state.name} />
       <Accordion>
         {this.state.races.length === 0
           ? <Spinner />
@@ -43,6 +46,7 @@ export class Prediction extends Component {
                                                                race={race}
                                                                racers={this.getRacersFromState(race.id)} />)}
       </Accordion>
+      </span>
     );
   }
 }
