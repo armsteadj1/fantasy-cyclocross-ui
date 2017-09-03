@@ -13,16 +13,16 @@ export const PredictionRaces = ({ race, racers, i, ...rest}) => (
     {racers && racers.length > 0 && <Table striped bordered condensed hover responsive >
       <thead>
       <tr>
-        <th>Points</th>
+        <th>(#) Points</th>
         <th>Name</th>
         <th>Team</th>
         <th>Location</th>
       </tr>
       </thead>
       <tbody>
-      {racers.map(racer =>
+      {racers.map((racer, num) =>
         <tr>
-          <td>{racer.points}</td>
+          <td>({num + 1}) {racer.points}</td>
           <td>{racer.name} <RacerIcon name={racer.name} team={racer.team} /></td>
           <td>{racer.team}</td>
           <td>{racer.location}</td>

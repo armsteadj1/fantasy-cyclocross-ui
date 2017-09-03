@@ -29,7 +29,7 @@ export class StateRaces extends Component {
         {this.state.races.length === 0 && <Spinner />}
           {this.state.races.map(race => {
             let url = `/states/${state}/races/${race.year}/${race.id}/${race.complete ? 'results' : 'prediction'}`;
-            return (<Navbar header={`${race.name} [ ${race.city} ]`} >
+            return (<Navbar>
               <Navbar.Header>
                 <Navbar.Brand>
               <span className="hidden-xs" >
