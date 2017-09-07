@@ -26,7 +26,7 @@ export const App = ({ children }) => (
     </Row>
     <Row>
       <Col className="text-center">
-        <a target="_blank" href="mailto:armsteadj1@gmail.com">Contact <FontAwesome name="hand-rock-o"/> </a>
+        <a target="_blank" href="mailto:holla.at.usacx@gmail.com">Contact <FontAwesome name="hand-rock-o"/> </a>
       </Col>
     </Row>
   </div>
