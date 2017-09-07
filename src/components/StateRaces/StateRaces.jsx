@@ -64,7 +64,7 @@ export class StateRaces extends Component {
                 {race.id &&
                 <Nav pullRight >
                   <NavItem className="visible-xs" >[ {race.city} ] - {race.date}</NavItem>
-                  <NavItem href={url}>{race.complete ? 'Results' : 'Registraions'}</NavItem>
+                  <NavItem href={url}>{race.complete ? 'Results' : 'Registrations'}</NavItem>
                   <NavItem target="_blank"
                            href={`https://www.usacycling.org/events/getflyer.php?permit=${race.year}-${race.id}`} >Flyer</NavItem>
                   {!race.complete && <NavItem target="_blank" href={`https://www.usacycling.org/register/${race.year}-${race.id}`} >Register</NavItem>}
