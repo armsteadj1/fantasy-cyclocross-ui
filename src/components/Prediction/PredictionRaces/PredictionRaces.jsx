@@ -23,7 +23,7 @@ export const PredictionRaces = ({ race, racers, i, ...rest}) => (
       {racers.map((racer, num) =>
         <tr>
           <td>({num + 1}) {racer.points}</td>
-          <td>{racer.name} <RacerIcon name={racer.name} team={racer.team} /></td>
+          <td>{racer.name} <RacerIcon name={racer.name} location={racer.location} /></td>
           <td>{racer.team}</td>
           <td>{racer.location}</td>
         </tr>)}

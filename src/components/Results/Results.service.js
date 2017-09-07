@@ -1,46 +1,58 @@
 import * as cheerio from 'cheerio';
 import rp from 'request-promise';
-import request from 'request';
-import tough from 'tough-cookie';
 
 const getUsacAccessRegex = /usacsess=(.*); path=\/; domain=usacycling.org; HttpOnly/g;
 
-export const getResults = (id, usac) => {
-  // var j = request.jar();
-  // var cookie = request.cookie(`usacsess=${usac}`);
-  // j.setCookie(cookie, '*');
+export const getResults = (id, usac) =>
+  new Promise(resolve => {
+    rp({
+      uri: `https://api.usacx.co/results?race_id=${id}`,
+      headers: {
+        accept: 'application/json',
+        'content-type': 'application/json',
+        'usac': `usacsess=${usac}`,
+      },
+      json: true
+    }).then(({ message }) => {
+      const results = [];
+      const data = cheerio.load(message);
+      const resultsRows = data('.tablerow');
 
-  let cookie = new tough.Cookie({
-    key: "usacsess",
-    value: usac,
-    domain: 'api.usacx.co',
-    httpOnly: false,
-    maxAge: 31536000
+      resultsRows.each((i, r) => {
+        const row = data(r).find('div.results');
+        if(row.length > 0) {
+          const nameArray = data(row[4]).text().split(' (');
+          results.push({
+            place: data(row[1]).text(),
+            points: data(row[2]).text(),
+            name: nameArray[0],
+            placeInCat: nameArray[1] ? nameArray[1].trim().slice(0, -1) : '',
+            location: data(row[5]).text(),
+            time: data(row[6]).text(),
+            usacId: data(row[8]).text(),
+            team: data(row[10]).text(),
+          });
+        }
+      });
+
+      return resolve({ results });
+    });
   });
 
-// Put cookie in an jar which can be used across multiple requests
-  var cookiejar = request.jar();
-  cookiejar.setCookie(cookie, 'https://api.usacx.co');
-//
-//   var j = request.jar();
-//   var cookie = request.cookie(`usacsess=${usac}`);
-//   var url = 'api.usacx.co';
-//   j.setCookie(cookie, url);
 
-  return new Promise(resolve => {
+export const getDayRaces = (id, usac) =>
+  new Promise(resolve => {
     rp({
       uri: `https://api.usacx.co/results/races?info_id=${id}`,
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
+        'usac': `usacsess=${usac}`,
       },
-      jar: cookiejar,
-      withCredentials: true,
-      crossDomain: true,
-    }).then(response => {
-
+      json: true
+    }).then(({ message }) => {
       const results = [];
-      const data = cheerio.load(response);
+      const data = cheerio.load(message);
       const resultsRows = data('#results_list').find('li');
 
       resultsRows.each((i, r) => {
@@ -50,11 +62,9 @@ export const getResults = (id, usac) => {
         });
       });
 
-      console.log(results)
       return resolve(results);
     });
   });
-}
 
 export const getResultDays = (year, id) =>
   new Promise(resolve => {
@@ -64,6 +74,7 @@ export const getResultDays = (year, id) =>
     }).then(response => {
       const days = [];
       const data = cheerio.load(response.body);
+      const name = data('title').text().replace('Results for ', '').replace(' - USA Cycling', '');
       const resultsRows = data('div#mainContent').find('.tablecell').find('a');
       const usac = getUsacAccessRegex.exec(response.headers[ 'usac-access' ])[ 1 ];
 
@@ -77,6 +88,7 @@ export const getResultDays = (year, id) =>
       });
 
       return resolve({
+        name,
         days,
         usac
       });
