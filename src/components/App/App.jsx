@@ -4,13 +4,14 @@ import FontAwesome from 'react-fontawesome';
 import './App.css';
 import logo from './logo.png';
 import { Analytics } from './Analytics/Analytics';
+import { Link } from 'react-router-dom';
 
 export const App = ({ children }) => (
   <div className="container-fluid" >
     <Analytics />
     <Row>
       <Col xs={6} xsOffset={3} sm={4} smOffset={4} >
-        <img src={logo} className="logo img-responsive" />
+        <Link to="/"><img src={logo} className="logo img-responsive" /></Link>
       </Col>
     </Row>
     <Row>
