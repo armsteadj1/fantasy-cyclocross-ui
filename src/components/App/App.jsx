@@ -21,6 +21,8 @@ export const App = ({ children }) => (
     </Row>
     <Row>
       <Col className="text-center">
+        <br />
+        <br />
         Made with <FontAwesome name="heart" /> in Des Moines, Iowa.
       </Col>
     </Row>
@@ -29,5 +31,14 @@ export const App = ({ children }) => (
         <a target="_blank" href="mailto:holla.at.usacx@gmail.com">Contact <FontAwesome name="hand-rock-o"/> </a>
       </Col>
     </Row>
+    <Row>
+      <Col className="text-center">
+        <br />
+        <Link to="/terms">Terms</Link> | <a target="_blank" href="https://www.iubenda.com/privacy-policy/8211639/">Privacy</a>
+        <br />
+        <br />
+      </Col>
+    </Row>
+
   </div>
 );

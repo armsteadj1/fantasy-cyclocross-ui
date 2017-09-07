@@ -6,6 +6,7 @@ import { Prediction } from '../Prediction/Prediction';
 import { StateRaces } from '../StateRaces/StateRaces';
 import { States } from '../States/States';
 import { Results } from '../Results/Results';
+import { Terms } from '../Terms/Terms';
 
 export const Routes = props => (
   <BrowserRouter {...props}>
@@ -16,6 +17,7 @@ export const Routes = props => (
         <Route exact path="/states/:state/races/:year/:id/prediction" component={Prediction} />
         <Route exact path="/states/:state/races/:year/:id/results" component={Results} />
         <Route exact path="/states/:state/races" component={StateRaces} />
+        <Route exact path="/terms" component={Terms} />
 
         <Redirect to="/" />
       </Switch>

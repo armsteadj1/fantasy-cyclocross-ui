@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c000b4e0-89e4-4096-93a0-2c1b9541ae72" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/App/Analytics/Analytics.jsx" afterPath="$PROJECT_DIR$/src/components/App/Analytics/Analytics.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/App/App.jsx" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Routes/Routes.jsx" afterPath="$PROJECT_DIR$/src/components/Routes/Routes.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,21 +26,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/App/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="495">
+              <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Analytics.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Analytics.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/App/Analytics/Analytics.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Terms.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Terms/Terms.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="53" column="9" lean-forward="false" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Routes.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Routes/Routes.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -82,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Prediction/Prediction.test.js" />
@@ -115,7 +135,6 @@
         <option value="$PROJECT_DIR$/src/components/States/StateButton/StateButton.jsx" />
         <option value="$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.jsx" />
         <option value="$PROJECT_DIR$/src/components/Results/RacerIcon.css" />
-        <option value="$PROJECT_DIR$/src/components/Routes/Routes.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.jsx" />
         <option value="$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.jsx" />
@@ -131,8 +150,10 @@
         <option value="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" />
         <option value="$PROJECT_DIR$/src/components/StateRaces/StateRaces.service.js" />
         <option value="$PROJECT_DIR$/src/components/StateRaces/StateRaces.jsx" />
-        <option value="$PROJECT_DIR$/src/components/App/App.jsx" />
         <option value="$PROJECT_DIR$/src/components/App/Analytics/Analytics.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Routes/Routes.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Terms/Terms.jsx" />
+        <option value="$PROJECT_DIR$/src/components/App/App.jsx" />
       </list>
     </option>
   </component>
@@ -213,50 +234,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="usacx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="usacx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Results" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="usacx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="usacx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Prediction" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,7 +380,7 @@
       <updated>1504101848883</updated>
       <workItem from="1504101850641" duration="7406000" />
       <workItem from="1504149490386" duration="26871000" />
-      <workItem from="1504607041105" duration="20446000" />
+      <workItem from="1504607041105" duration="20942000" />
     </task>
     <servers />
   </component>
@@ -440,7 +417,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56446000" />
+    <option name="totallyTimeSpent" value="56942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="6" />
@@ -494,13 +471,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -689,14 +659,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Results/RacerIcon.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/Routes/Routes.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Results/Results.test.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -829,18 +791,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App/App.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/App/Analytics/Analytics.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App/Analytics/Analytics.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/Routes/Routes.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Terms/Terms.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="53" column="9" lean-forward="false" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
           <folding />
         </state>
       </provider>
