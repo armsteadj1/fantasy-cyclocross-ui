@@ -1,6 +1,11 @@
 import * as cheerio from 'cheerio';
 import rp from 'request-promise';
 
+const getExternalRegistrationLink = link => {
+  const href = cheerio.load(link)('a').attr('href');
+  return href.includes('http') ? href : '';
+};
+
 export const getRaces = (state, year) =>
   new Promise(resolve => {
     rp({
@@ -27,14 +32,19 @@ export const getRaces = (state, year) =>
         const raceData = data(r).parent().html().split('<br>');
         const city = raceData.filter(d => d.includes(state))[ 0 ].trim();
         const date = raceData.filter(d => d.includes(`/${year}`) && !d.includes('Permit'))[ 0 ].trim();
+        const registrationLinkRaw = raceData.filter(d => d.includes('Online Registration'));
+        const hasRegistration = registrationLinkRaw && registrationLinkRaw.length > 0;
+        const externalRegistration = hasRegistration ? getExternalRegistrationLink(registrationLinkRaw[0]) : '';
         const permitData = raceData[ 1 ].replace('Permit Number: ', '').replace('&#xA0;&#xA0;', '').trim();
+        const lastDate = new Date(date.split(' - ')[date.split(' - ').length - 1]).setHours(23);
+        complete = complete ? complete : lastDate <= new Date();
         let id;
 
         if (permitData.includes(year)) {
           id = permitData.split('-')[ 1 ];
         }
 
-        races.push({ year, id, name, date, city, complete });
+        races.push({ year, id, name, date, city, complete, externalRegistration, hasRegistration, lastDate });
       });
       resolve(races);
     });

@@ -10,7 +10,7 @@ import { getRaces } from './StateRaces.service';
 export class StateRaces extends Component {
   constructor(props, context) {
     super(props, context);
-    this.state = { races: [] };
+    this.state = { races: undefined };
 
   }
 
@@ -20,14 +20,14 @@ export class StateRaces extends Component {
 
   render() {
     let state = this.props.match.params.state;
-
     return (
       <span>
         <Breadcrumbs state={state} />
       <Row>
         <Col xs={12} md={12} lg={10} lgOffset={1} >
-        {this.state.races.length === 0 && <Spinner />}
-          {this.state.races.map(race => {
+        {!this.state.races ? <Spinner />
+          : this.state.races.length === 0 && <h2 className="text-center">It appears this state doesn't have any races :(</h2>}
+          {this.state.races && this.state.races.map(race => {
             let url = `/states/${state}/races/${race.year}/${race.id}/${race.complete ? 'results' : 'prediction'}`;
             return (<Navbar>
               <Navbar.Header>
