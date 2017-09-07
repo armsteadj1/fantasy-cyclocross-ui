@@ -61,7 +61,6 @@ export const getResultDays = (year, id) =>
     rp({
       uri: `https://api.usacx.co/results/days?permit=${year}-${id}`,
       resolveWithFullResponse: true,
-      withCredentials: true,
     }).then(response => {
       const days = [];
       const data = cheerio.load(response.body);
