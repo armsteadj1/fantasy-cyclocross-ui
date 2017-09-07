@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c000b4e0-89e4-4096-93a0-2c1b9541ae72" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Results/Results.jsx" afterPath="$PROJECT_DIR$/src/components/Results/Results.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" afterPath="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx" afterPath="$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.test.jsx" afterPath="$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.test.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.jsx" afterPath="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.test.jsx" afterPath="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.test.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/States/StateButton/StateButton.test.jsx" afterPath="$PROJECT_DIR$/src/components/States/StateButton/StateButton.test.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +30,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PredictionRaces.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PredictionRaces.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.jsx">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredictionRaces.test.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="48" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RaceResults.test.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.test.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-64">
+              <caret line="39" column="52" lean-forward="true" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RaceResults.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.jsx">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="8" />
+              <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RacerIcon.test.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.test.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,16 +85,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RaceResults.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -93,6 +127,7 @@
       <find />
       <find>}</find>
       <find>repla</find>
+      <find>results</find>
     </findStrings>
     <replaceStrings>
       <replace>3</replace>
@@ -114,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Prediction/Prediction.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/App.js" />
@@ -124,7 +158,6 @@
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/src/App.test.js" />
         <option value="$PROJECT_DIR$/src/components/RacerIcon/Results.css" />
-        <option value="$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.css" />
         <option value="$PROJECT_DIR$/src/components/FontAwesome.css" />
         <option value="$PROJECT_DIR$/src/components/Spinner/Spinner.css" />
@@ -132,10 +165,8 @@
         <option value="$PROJECT_DIR$/src/components/Spinner/Spinner.jsx" />
         <option value="$PROJECT_DIR$/src/helpers/shrug.js" />
         <option value="$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.css" />
-        <option value="$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/StateRaces/StateRaces.css" />
         <option value="$PROJECT_DIR$/src/components/States/States.test.jsx" />
-        <option value="$PROJECT_DIR$/src/components/States/StateButton/StateButton.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/States.css" />
         <option value="$PROJECT_DIR$/src/components/Home/Home.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/Routes/Routes.test.jsx" />
@@ -164,7 +195,11 @@
         <option value="$PROJECT_DIR$/src/components/App/App.jsx" />
         <option value="$PROJECT_DIR$/src/components/Results/Results.jsx" />
         <option value="$PROJECT_DIR$/src/components/Results/ResultRaces/ResultRaces.jsx" />
+        <option value="$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.test.jsx" />
+        <option value="$PROJECT_DIR$/src/components/States/StateButton/StateButton.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.test.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx" />
       </list>
     </option>
   </component>
@@ -435,44 +470,44 @@
       <updated>1504101848883</updated>
       <workItem from="1504101850641" duration="7406000" />
       <workItem from="1504149490386" duration="26871000" />
-      <workItem from="1504607041105" duration="15942000" />
+      <workItem from="1504607041105" duration="16546000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="USACx - 2017.09.01 at 22h 23m 15s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 28m 02s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="USACx - 2017.09.01 at 22h 50m 54s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 28m 49s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="USACx - 2017.09.01 at 23h 04m 18s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 29m 01s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="USACx - 2017.09.01 at 23h 05m 18s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 29m 42s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="USACx - 2017.09.01 at 23h 05m 42s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 30m 23s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="USACx - 2017.09.01 at 23h 07m 18s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 31m 38s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="USACx - 2017.09.01 at 23h 07m 38s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 32m 34s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="USACx - 2017.09.01 at 23h 08m 00s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 33m 50s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="USACx - 2017.09.01 at 23h 11m 08s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 34m 46s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="USACx - 2017.09.01 at 23h 19m 08s.xml">
+    <history-entry file="USACx - 2017.09.07 at 06h 36m 35s.xml">
       <configuration name="USACx" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51942000" />
+    <option name="totallyTimeSpent" value="52546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="6" />
@@ -483,7 +518,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.33982685" sideWeight="0.5168598" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.459854" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3620438" sideWeight="0.48314014" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4947313" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.4947313" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.24940239" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -526,13 +561,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -607,14 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Spinner/Spinner.test.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -647,13 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/States/StateButton/StateButton.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -700,13 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.test.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -829,14 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Results/Results.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -863,10 +861,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/States/StateButton/StateButton.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="93" lean-forward="false" selection-start-line="11" selection-start-column="93" selection-end-line="11" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="39" column="52" lean-forward="true" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        <state relative-caret-position="135">
+          <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="48" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>

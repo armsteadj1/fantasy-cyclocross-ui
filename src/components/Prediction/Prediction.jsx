@@ -11,13 +11,13 @@ export class Prediction extends Component {
     super(props, context);
     this.state = {
       races: [],
-      racers: [],
+      results: [],
     };
   }
 
   getRacersFromState(id) {
-    const racers = this.state.racers.find(f => f.id === id);
-    return racers ? racers.racers : undefined;
+    const racers = this.state.results.find(f => f.id === id);
+    return racers ? racers.results : undefined;
   }
 
   componentDidMount() {
@@ -26,9 +26,9 @@ export class Prediction extends Component {
 
       races.races.forEach(i => {
         getRacers(i.id).then(racers => {
-          const currentRacers = this.state.racers;
-          currentRacers.push({ id: i.id, racers });
-          this.setState({ racers: currentRacers });
+          const currentRacers = this.state.results;
+          currentRacers.push({ id: i.id, results });
+          this.setState({ results: currentRacers });
         });
       });
     });

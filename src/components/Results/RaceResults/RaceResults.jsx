@@ -7,7 +7,7 @@ import './RaceResults.css';
 export const RaceResults = ({ race, results, getResults, ...rest}) => (
   <Panel header={`${race.name}`} onEnter={getResults} {...rest} >
     {!results && <Spinner /> }
-    {results && results.length === 0 && <span>There are currently no rad individuals registered.</span>}
+    {results && results.length === 0 && <span>USAC appears to believe no one SENT IT on this race. Move along. :D</span>}
     {results && results.length > 0 && <Table striped bordered condensed hover responsive >
       <thead>
       <tr>

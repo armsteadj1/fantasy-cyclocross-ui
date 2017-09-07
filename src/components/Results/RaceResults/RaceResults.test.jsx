@@ -16,8 +16,9 @@ beforeEach(() => {
     race: {
       name: shrug.first(),
     },
-    racers: [ {
+    results: [ {
       points: shrug.string(),
+      placeInCat: shrug.string(),
       name: shrug.first(),
       team: shrug.last(),
       location: shrug.state()
@@ -26,42 +27,40 @@ beforeEach(() => {
 });
 
 it('will have a panel with the correct header', () => {
-  opts.racers = [];
+  opts.results = [];
   expect(render().props().header).toEqual(opts.race.name);
   expect(render().props().extra).toEqual(opts.extra);
 });
 
-it('will show number of racers in header', () => {
-  expect(render().props().header).toEqual(`${opts.race.name} [ 1 Racer(s) ]`);
-});
-
 it('panel displays a spinner if races undefined', () => {
-  opts.racers = undefined;
+  opts.results = undefined;
   expect(render()).toContainReact(<Spinner />);
 });
 
-it('panel displays no racers yet if empty', () => {
-  opts.racers = [];
-  expect(render()).toContainReact(<span>There are currently no rad individuals registered.</span>);
+it('panel displays no results yet if empty', () => {
+  opts.results = [];
+  expect(render()).toContainReact(<span>USAC appears to believe no one SENT IT on this race. Move along. :D</span>);
 });
 
-it('will have a table of all racers', () => {
+it('will have a table of all results', () => {
   expect(render()).toContainReact(
     <Table striped bordered condensed hover responsive >
       <thead>
       <tr>
-        <th>Points</th>
+        <th>(#) Points</th>
         <th>Name</th>
+        <th># - Cat</th>
         <th>Team</th>
         <th>Location</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-        <td>{opts.racers[0].points}</td>
-        <td>{opts.racers[0].name} <RacerIcon name={opts.racers[0].name} team={opts.racers[0].team} /></td>
-        <td>{opts.racers[0].team}</td>
-        <td>{opts.racers[0].location}</td>
+        <td>(1) {opts.results[0].points}</td>
+        <td>{opts.results[0].name} <RacerIcon name={opts.results[0].name} location={opts.results[0].location} /></td>
+        <td>{opts.results[0].placeInCat}</td>
+        <td>{opts.results[0].team}</td>
+        <td>{opts.results[0].location}</td>
       </tr>
       </tbody>
     </Table>

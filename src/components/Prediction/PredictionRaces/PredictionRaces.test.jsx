@@ -40,7 +40,7 @@ it('panel displays a spinner if races undefined', () => {
   expect(render()).toContainReact(<Spinner />);
 });
 
-it('panel displays no racers yet if empty', () => {
+it('panel displays no results yet if empty', () => {
   opts.racers = [];
   expect(render()).toContainReact(<span>There are currently no rad individuals registered.</span>);
 });
@@ -50,7 +50,7 @@ it('will have a table of all racers', () => {
     <Table striped bordered condensed hover responsive >
       <thead>
       <tr>
-        <th>Points</th>
+        <th>(#) Points</th>
         <th>Name</th>
         <th>Team</th>
         <th>Location</th>
@@ -58,8 +58,8 @@ it('will have a table of all racers', () => {
       </thead>
       <tbody>
       <tr>
-        <td>{opts.racers[0].points}</td>
-        <td>{opts.racers[0].name} <RacerIcon name={opts.racers[0].name} team={opts.racers[0].team} /></td>
+        <td>(1) {opts.racers[0].points}</td>
+        <td>{opts.racers[0].name} <RacerIcon name={opts.racers[0].name} location={opts.racers[0].location} /></td>
         <td>{opts.racers[0].team}</td>
         <td>{opts.racers[0].location}</td>
       </tr>
