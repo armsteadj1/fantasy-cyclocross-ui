@@ -6,6 +6,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "cheerio": "^1.0.0-rc.2",
+    "js-cookie": "^2.1.4",
     "net": "^1.0.2",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
@@ -16,7 +17,8 @@
     "react-scripts": "1.0.12",
     "request-promise": "^4.2.1",
     "tough-cookie": "^2.3.2",
-    "universal-analytics": "^0.4.15"
+    "universal-analytics": "^0.4.15",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
     "babel-preset-es2015-node4": "^2.1.1",
