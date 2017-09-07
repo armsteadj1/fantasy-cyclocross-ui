@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c000b4e0-89e4-4096-93a0-2c1b9541ae72" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" afterPath="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx" afterPath="$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.test.jsx" afterPath="$PROJECT_DIR$/src/components/RacerIcon/RacerIcon.test.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.jsx" afterPath="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.test.jsx" afterPath="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.test.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/States/StateButton/StateButton.test.jsx" afterPath="$PROJECT_DIR$/src/components/States/StateButton/StateButton.test.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,6 +15,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Prediction.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Prediction/Prediction.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/App/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -30,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PredictionRaces.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PredictionRaces.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -180,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/helpers/USStates.service.js" />
         <option value="$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/States/StateButton/StateButton.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" />
         <option value="$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.jsx" />
         <option value="$PROJECT_DIR$/src/components/Prediction/Prediction.service.js" />
         <option value="$PROJECT_DIR$/src/components/StateRaces/StateRaces.service.js" />
@@ -200,6 +204,7 @@
         <option value="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.jsx" />
         <option value="$PROJECT_DIR$/src/components/Results/RaceResults/RaceResults.test.jsx" />
         <option value="$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.test.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" />
       </list>
     </option>
   </component>
@@ -470,7 +475,7 @@
       <updated>1504101848883</updated>
       <workItem from="1504101850641" duration="7406000" />
       <workItem from="1504149490386" duration="26871000" />
-      <workItem from="1504607041105" duration="16546000" />
+      <workItem from="1504607041105" duration="16725000" />
     </task>
     <servers />
   </component>
@@ -507,7 +512,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52546000" />
+    <option name="totallyTimeSpent" value="52725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="6" />
@@ -819,22 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Prediction/Prediction.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Results/Results.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -904,7 +893,23 @@
     <entry file="file://$PROJECT_DIR$/src/components/Prediction/PredictionRaces/PredictionRaces.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Prediction/Prediction.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
