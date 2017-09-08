@@ -8,7 +8,7 @@ export const getLocation = () => {
     }
 
     rp({
-      uri: '//ip-api.com/json',
+      uri: 'https://ip-api.com/json',
       json: true
     }).then(({ lat, lon }) => {
       let location = { latitude: lat, longitude: lon };
