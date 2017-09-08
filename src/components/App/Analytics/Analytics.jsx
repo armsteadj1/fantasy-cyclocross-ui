@@ -10,6 +10,6 @@ export const Analytics = () => {
     Cookie.set('analytics_id', uuid());
   }
 
-  ua("UA-105800781-1", Cookie.get('analytics_id')).pageview(window.location.pathname).send();
+  ua("UA-105800781-1", Cookie.get('analytics_id'), {https: true}).pageview(window.location.pathname).send();
   return (<span />);
 };
