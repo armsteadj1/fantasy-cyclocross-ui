@@ -13,7 +13,7 @@ export const states = [
   { name: 'COLORADO', abbreviation: 'CO', latitude: 39.059811, longitude: -105.311104},
   { name: 'CONNECTICUT', abbreviation: 'CT', latitude: 41.597782, longitude: -72.755371},
   { name: 'DELAWARE', abbreviation: 'DE', latitude: 39.318523, longitude: -75.507141},
-  { name: 'District of Columbia', abbreviation: 'DC', latitude: 38.897438, longitude: -77.026817},
+  { name: 'DISTRICT OF COLUMBIA', abbreviation: 'DC', latitude: 38.897438, longitude: -77.026817},
   { name: 'FLORIDA', abbreviation: 'FL', latitude: 27.766279, longitude: -81.686783},
   { name: 'GEORGIA', abbreviation: 'GA', latitude: 33.040619, longitude: -83.643074},
   { name: 'HAWAII', abbreviation: 'HI', latitude: 21.094318, longitude: -157.498337},
