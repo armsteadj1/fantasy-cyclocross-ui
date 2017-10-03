@@ -3,9 +3,11 @@ import './RacerIcon.css';
 
 const images = {
   'JOE PETERSENDES MOINES, IA': 'https://bargeek.files.wordpress.com/2009/03/pbr_can.jpg',
-  'CHAD DONAHUEDES MOINES, IA': 'http://image.redbull.com/rbx00264/0100/0/406/products/packshots/en_GB/Red-Bull-Energy-Drink-Can-UK.png',
-  'STEPHEN HYDEEASTHAMPTON, MA': 'https://cdn.pixabay.com/photo/2016/04/06/13/18/american-flag-1311744_960_720.png',
-  'KATHERINE COMPTONCOLORADO SPRINGS, CO': 'https://cdn.pixabay.com/photo/2016/04/06/13/18/american-flag-1311744_960_720.png',
+  'CHAD DONAHUEDES MOINES, IA': 'https://pbs.twimg.com/profile_images/631910654576713728/cX9NRswP.png',
+  'STEPHEN HYDEEASTHAMPTON, MA': 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png',
+  'KATHERINE COMPTONCOLORADO SPRINGS, CO': 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png',
+  'JASON SCHOLBROCKDES MOINES, IA': 'http://www.taproduce.com/wp-content/uploads/2017/02/GreenLeaf_DSC3236-e1486411403980.png',
+  'KYLE SEDOREDES MOINES, IA': 'https://apps.voxmedia.com/graphics/theverge-android-emoji/images/emoji_u1f918-0aab50d1.png',
 };
 
 export const RacerIcon = ({name, location}) => (
