@@ -16,7 +16,8 @@ export const Routes = props => (
         <Route exact path="/states" component={States} />
         <Route exact path="/states/:state/races/:year/:id/prediction" component={Prediction} />
         <Route exact path="/states/:state/races/:year/:id/results" component={Results} />
-        <Route exact path="/states/:state/races" component={StateRaces} />
+        <Route exact path="/states/:state/races/" component={StateRaces} />
+        <Route exact path="/states/:state/races/:year" component={StateRaces} />
         <Route exact path="/terms" component={Terms} />
 
         <Redirect to="/" />

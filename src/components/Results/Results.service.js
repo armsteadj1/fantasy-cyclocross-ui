@@ -1,8 +1,6 @@
 import * as cheerio from 'cheerio';
 import rp from 'request-promise';
 
-const getUsacAccessRegex = /usacsess=(.*); path=\/; domain=usacycling.org; HttpOnly/g;
-
 export const getResults = (id, usac) =>
   new Promise(resolve => {
     rp({
@@ -38,7 +36,6 @@ export const getResults = (id, usac) =>
       return resolve({ results });
     });
   });
-
 
 export const getDayRaces = (id, usac) =>
   new Promise(resolve => {
@@ -76,16 +73,26 @@ export const getResultDays = (year, id) =>
       const data = cheerio.load(response.body);
       const name = data('title').text().replace('Results for ', '').replace(' - USA Cycling', '');
       const resultsRows = data('div#mainContent').find('.tablecell').find('a');
+      const getUsacAccessRegex = /usacsess=(.*); path=\/; domain=usacycling.org; HttpOnly/g;
       const usac = getUsacAccessRegex.exec(response.headers[ 'usac-access' ])[ 1 ];
 
-      resultsRows.each((i, r) => {
-        const properties = data(r).prop('onclick').split('(')[ 1 ].split(')')[ 0 ].split(',');
+      if(resultsRows.length > 0) {
+          resultsRows.each((i, r) => {
+              const properties = data(r).prop('onclick').split('(')[ 1 ].split(')')[ 0 ].split(',');
+              days.push({
+                  id: properties[ 0 ],
+                  type: properties[ 1 ].split(' ')[ 0 ].substring(1),
+                  day: properties[ 1 ].split(' ')[ 1 ].slice(0, -1),
+              });
+          });
+      } else {
+        const allScripts = data('script');
+        const theScript = allScripts[allScripts.length - 1]
         days.push({
-          id: properties[ 0 ],
-          type: properties[ 1 ].split(' ')[ 0 ].substring(1),
-          day: properties[ 1 ].split(' ')[ 1 ].slice(0, -1),
-        });
-      });
+            id: theScript.children[0].data.split('(')[1].split(',')[0],
+            day: "One Day"
+        })
+      }
 
       return resolve({
         name,

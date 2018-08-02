@@ -41,10 +41,12 @@ export class Prediction extends Component {
     });
   }
 
+
   render() {
+
     return (
       <span>
-      <Breadcrumbs state={this.props.match.params.state} race={this.state.name} />
+      <Breadcrumbs state={this.props.match.params.state} year={this.props.match.params.year} race={this.state.name} />
       <Accordion>
         {this.state.registrationNotHere
           ? <h2 className="text-center" >This race must be too cool for USAC and has it's registration else where, BikeReg?</h2>

@@ -4,6 +4,10 @@
     font-size: 16px;
 }
 
+.years {
+    margin-bottom: 20px;
+}
+
 @media (min-width: 991px) {
 .navbar .container {
     padding-left: 0;

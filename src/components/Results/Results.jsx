@@ -3,7 +3,7 @@ import { Accordion, Panel } from 'react-bootstrap';
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
 import { RaceResults } from './RaceResults/RaceResults';
 import './Results.css';
-import { getDayRaces, getResultDays, getResults } from './Results.service';
+import {getDayRaces, getOneDayRaces, getResultDays, getResults} from './Results.service';
 
 export class Results extends Component {
   constructor(props, context) {
@@ -46,7 +46,7 @@ export class Results extends Component {
   render() {
     return (
       <span>
-        <Breadcrumbs state={this.props.match.params.state} race={this.state.name} />
+        <Breadcrumbs state={this.props.match.params.state} year={this.props.match.params.year} race={this.state.name} />
         <Accordion>
         {this.state.days.map((day, i) =>
           <Panel header={`${day.day}`} eventKey={i} >
