@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c000b4e0-89e4-4096-93a0-2c1b9541ae72" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Results/Results.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results/Results.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Results/Results.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results/Results.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Routes/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Routes/Routes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StateRaces/StateRaces.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StateRaces/StateRaces.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StateRaces/StateRaces.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StateRaces/StateRaces.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Results.service.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Results.service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Results/Results.service.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="673">
@@ -78,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Breadcrumbs.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Breadcrumbs.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="465">
+              <caret line="31" column="82" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -120,6 +113,7 @@
       <find>'},</find>
       <find>getDayRaces</find>
       <find>getUsacAccessRegex</find>
+      <find>split</find>
     </findStrings>
     <replaceStrings>
       <replace>3</replace>
@@ -188,11 +182,11 @@
         <option value="$PROJECT_DIR$/src/components/Routes/Routes.jsx" />
         <option value="$PROJECT_DIR$/src/components/Prediction/Prediction.jsx" />
         <option value="$PROJECT_DIR$/src/components/StateRaces/StateRaces.css" />
-        <option value="$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/StateRaces/StateRaces.jsx" />
         <option value="$PROJECT_DIR$/src/components/Results/Results.jsx" />
         <option value="$PROJECT_DIR$/src/components/Results/Results.service.js" />
+        <option value="$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.jsx" />
       </list>
     </option>
   </component>
@@ -340,7 +334,7 @@
       <workItem from="1504101850641" duration="7406000" />
       <workItem from="1504149490386" duration="26871000" />
       <workItem from="1504607041105" duration="27150000" />
-      <workItem from="1533180589226" duration="4973000" />
+      <workItem from="1533180589226" duration="5419000" />
     </task>
     <servers />
   </component>
@@ -377,7 +371,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68123000" />
+    <option name="totallyTimeSpent" value="68569000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -702,16 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -747,6 +731,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
           <caret line="93" column="10" lean-forward="true" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Breadcrumbs/Breadcrumbs.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="82" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -27,6 +27,9 @@ export const Breadcrumbs = ({ state, race, year }) => {
                     <MenuItem><Link to={`/states/${state.toLowerCase()}/races/2010`}>2010</Link></MenuItem>
                     <MenuItem><Link to={`/states/${state.toLowerCase()}/races/2009`}>2009</Link></MenuItem>
                     <MenuItem><Link to={`/states/${state.toLowerCase()}/races/2008`}>2008</Link></MenuItem>
+                    <MenuItem><Link to={`/states/${state.toLowerCase()}/races/2007`}>2007</Link></MenuItem>
+                    <MenuItem><Link to={`/states/${state.toLowerCase()}/races/2006`}>2006</Link></MenuItem>
+                    <MenuItem><Link to={`/states/${state.toLowerCase()}/races/2005`}>2005</Link></MenuItem>
                 </DropdownButton>
 
                 {/*<Link to={`/states/${state.toLowerCase()}/races/${year}`}>{year}</Link>*/}
