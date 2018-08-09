@@ -63,6 +63,7 @@ export class Racers extends Component {
                         <tr>
                             <th>id</th>
                             <th>Name</th>
+                            <th>Category</th>
                             <th>Last Year Points</th>
                             <th>Cost</th>
                             <th>Select</th>
@@ -74,6 +75,7 @@ export class Racers extends Component {
                                 <tr>
                                     <td>{racer.id}</td>
                                     <td><ReactCountryFlag code={racer.country_short}/> {racer.name}</td>
+                                    <td>{racer.category}</td>
                                     <td>{racer.previous_year_points}</td>
                                     <td><NumberFormat value={racer.cost} decimalScale={2} fixedDecimalScale={true}
                                                       displayType={'text'} thousandSeparator={true} prefix={'$'}/>
