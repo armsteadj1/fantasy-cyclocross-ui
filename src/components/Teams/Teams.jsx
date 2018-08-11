@@ -9,7 +9,7 @@ import ReactCountryFlag from 'react-country-flag';
 export class Teams extends Component {
     constructor(props, context) {
         super(props, context);
-        this.state = {teams: undefined, password: undefined};
+        this.state = {teams: undefined, password: ''};
 
     }
 
