@@ -9,7 +9,7 @@ import ReactCountryFlag from 'react-country-flag';
 export class Teams extends Component {
     constructor(props, context) {
         super(props, context);
-        this.state = {teams: undefined};
+        this.state = {teams: undefined, password: undefined};
 
     }
 
@@ -26,13 +26,16 @@ export class Teams extends Component {
     render() {
         return (
             <span>
-                <Row>
-                <Col xs={12} md={12} lg={10} lgOffset={1}>
-                {!this.state.teams
-                    ? <Spinner/>
-                    :
-                    this.state.teams.map(team =>
-                    <span>
+            {
+                this.state.password !== 'radness'
+                    ? <span>Password: <input type="text" onChange={(event) => this.setState({password: event.target.value})} /></span>
+                    : <Row>
+                        <Col xs={12} md={12} lg={10} lgOffset={1}>
+                            {!this.state.teams
+                                ? <Spinner/>
+                                :
+                                this.state.teams.map(team =>
+                                        <span>
                         <h1>{team.name}</h1>
                         <h5>{team.owner}</h5>
                         <ListGroup>
@@ -44,7 +47,7 @@ export class Teams extends Component {
                                     {!racer.active  && <Label bsStyle="danger">inactive</Label>}
                                 </ListGroupItem>
                             )}
-                        <ListGroupItem>
+                            <ListGroupItem>
                             <NumberFormat
                                 value={team.racers.filter(r => r.active).reduce((cost, r) => cost + parseFloat(r.cost), 0.0)}
                                 decimalScale={2}
@@ -56,10 +59,11 @@ export class Teams extends Component {
                         </ListGroupItem>
                         </ListGroup>
                         </span>
-                    )
-                }
-              </Col>
-            </Row>
+                                )
+                            }
+                        </Col>
+                    </Row>
+            }
       </span>
         );
     }
