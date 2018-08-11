@@ -27,7 +27,7 @@ export class Teams extends Component {
         return (
             <span>
             {
-                this.state.password !== 'radness'
+                this.state.password.toLowerCase() !== 'radness'
                     ? <span>Password: <input type="text" onChange={(event) => this.setState({password: event.target.value})} /></span>
                     : <Row>
                         <Col xs={12} md={12} lg={10} lgOffset={1}>
