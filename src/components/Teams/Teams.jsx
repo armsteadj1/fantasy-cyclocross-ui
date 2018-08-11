@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Checkbox, Col, ListGroup, ListGroupItem, Row, Table} from 'react-bootstrap';
+import {Col, Label, ListGroup, ListGroupItem, Row} from 'react-bootstrap';
 import {Spinner} from '../Spinner/Spinner';
 import './Teams.css';
 import {getTeams} from './Teams.service';
@@ -36,16 +36,17 @@ export class Teams extends Component {
                         <h1>{team.name}</h1>
                         <h5>{team.owner}</h5>
                         <ListGroup>
-                            {team.uci_racers.map(racer =>
+                            {team.racers.map(racer =>
                                 <ListGroupItem>
                                     <ReactCountryFlag code={racer.country_short}/>
                                     {racer.name}
                                     (<NumberFormat value={racer.cost} decimalScale={2} fixedDecimalScale={true} displayType={'text'} thousandSeparator={true} prefix={'$'}/>)
+                                    {!racer.active  && <Label bsStyle="danger">inactive</Label>}
                                 </ListGroupItem>
                             )}
                         <ListGroupItem>
                             <NumberFormat
-                                value={team.uci_racers.reduce((cost, r) => cost + parseFloat(r.cost), 0.0)}
+                                value={team.racers.filter(r => r.active).reduce((cost, r) => cost + parseFloat(r.cost), 0.0)}
                                 decimalScale={2}
                                 fixedDecimalScale={true}
                                 displayType={'text'}

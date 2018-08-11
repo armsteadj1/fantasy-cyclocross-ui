@@ -3,7 +3,7 @@ import rp from 'request-promise';
 export const getTeams = () =>
   new Promise(resolve => {
     rp({
-      uri: `https://fantasy-cyclocross.herokuapp.com/teams`,
+      uri: `http://localhost:3001/teams`,
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
