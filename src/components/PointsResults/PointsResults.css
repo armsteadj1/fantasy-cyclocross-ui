@@ -1,0 +1,32 @@
+.rank {
+    margin-top: -10px;
+    margin-bottom: -25px;
+    margin-left: -15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    width: 50px;
+    float: left;
+    background-color: lightgrey;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.rank-font {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.points {
+    width: 100px;
+    float: right;
+}
+
+.teamName {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.owner {
+    font-size: 11px;
+}
