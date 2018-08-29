@@ -5,6 +5,10 @@ import './PointsResults.css';
 import {getTeams} from './PointsTeams.service';
 import NumberFormat from "react-number-format";
 import ReactCountryFlag from 'react-country-flag';
+import { Icon } from 'react-icons-kit'
+import { bullhorn } from 'react-icons-kit/icomoon/bullhorn'
+import {Link} from "react-router-dom";
+
 
 export class PointsResults extends Component {
     constructor(props, context) {
@@ -75,6 +79,7 @@ export class PointsResults extends Component {
                 <span className="rank">{i + 1}</span>
                 <span className="teamName">{team.name}</span>
                 <span className="owner"> ({team.owner})</span>
+                <div className="horn"><Link to={`/teams/${team.id}`}><Icon icon={bullhorn} /></Link></div>
                 <div className="points">
                     <NumberFormat value={team.points}
                                   decimalScale={0} fixedDecimalScale={true}

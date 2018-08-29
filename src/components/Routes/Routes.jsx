@@ -5,6 +5,7 @@ import { App } from '../App/App';
 import {Racers} from "../Racers/Racers";
 import {Teams} from "../Teams/Teams";
 import {PointsResults} from "../PointsResults/PointsResults";
+import {TeamDetails} from "../TeamDetails/TeamDetails";
 
 export const Routes = props => (
   <BrowserRouter {...props}>
@@ -14,6 +15,7 @@ export const Routes = props => (
         <Route exact path="/racers" component={Racers} />
         <Route exact path="/teams" component={Teams} />
         <Route exact path="/results/points" component={PointsResults} />
+        <Route exact path="/teams/:id" component={TeamDetails} />
         <Redirect to="/" />
       </Switch>
     </App>
