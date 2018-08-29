@@ -50,9 +50,9 @@ export class TeamDetails extends Component {
         return racer.results.map(race =>
             <ListGroupItem>
                 <Row>
-                    <Col xs={1}><b>{ordinal(race.place)}</b></Col>
-                    <Col xs={9}>{race.competition_name} ({race.category})</Col>
-                    <Col xs={2} className={"text-right"}><NumberFormat value={race.points}
+                    <Col xs={1} lg={1}><b>{ordinal(race.place)}</b></Col>
+                    <Col xs={8} lg={9}>{race.competition_name} ({race.category})</Col>
+                    <Col xs={2} lg={2} className={"text-right"}><NumberFormat value={race.points}
                                        decimalScale={0}
                                        fixedDecimalScale={true}
                                        displayType={'text'}
