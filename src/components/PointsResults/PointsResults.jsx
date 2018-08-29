@@ -38,13 +38,11 @@ export class PointsResults extends Component {
     }
 
     doRaces() {
-        getTeams().then(teams => {
-            this.setState({teams})
-        });
+        getTeams().then(teams => this.setState({teams}));
     }
 
     teamsByPoints() {
-        return this.state.teams.sort((a, b) => a.points - b.points || a.id - b.id);
+        return this.state.teams.sort((a, b) => b.points - a.points || a.id - b.id);
     }
 
     toggleShowRacers(team) {
