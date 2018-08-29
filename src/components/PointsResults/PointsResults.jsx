@@ -78,7 +78,7 @@ export class PointsResults extends Component {
                 <span className="teamName">{team.name}</span>
                 <span className="owner"> ({team.owner})</span>
                 <div className="points">
-                    <NumberFormat value={3450}
+                    <NumberFormat value={team.points}
                                   decimalScale={0} fixedDecimalScale={true}
                                   displayType={'text'} thousandSeparator={true}/> points
                 </div>
