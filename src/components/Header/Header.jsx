@@ -14,14 +14,11 @@ export class Header extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="/racers">
-                            Racers
+                        <NavItem eventKey={2} href="/results/points">
+                            Results
                         </NavItem>
                         <NavItem eventKey={2} href="/teams">
                             Teams
-                        </NavItem>
-                        <NavItem eventKey={2} href="/results/points">
-                            Results
                         </NavItem>
                     </Nav>
                 </Navbar.Collapse>
