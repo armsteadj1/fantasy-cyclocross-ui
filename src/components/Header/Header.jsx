@@ -17,9 +17,6 @@ export class Header extends Component {
                         <NavItem eventKey={2} href="/results/points">
                             Results
                         </NavItem>
-                        <NavItem eventKey={2} href="/teams">
-                            Teams
-                        </NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

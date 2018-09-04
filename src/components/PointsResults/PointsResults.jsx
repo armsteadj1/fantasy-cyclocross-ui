@@ -78,7 +78,7 @@ export class PointsResults extends Component {
             <ListGroupItem onClick={() => this.toggleShowRacers(team)}>
                 <span className="rank">{i + 1}</span>
                 <span className="teamName">{team.name}</span>
-                <span className="owner"> ({team.owner})</span>
+                <span className="owner"> ({team.owner}) {!team.paid && <Label bsStyle="danger">not paid</Label>}</span>
                 <div className="horn"><Link to={`/teams/${team.id}`}><Icon icon={bullhorn} /></Link></div>
                 <div className="points">
                     <NumberFormat value={team.points}

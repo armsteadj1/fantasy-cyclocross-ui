@@ -30,7 +30,7 @@ export class TeamDetails extends Component {
                              :
                              <span>
                                 <h1>{team.name}</h1>
-                                 <h4>{team.points} points</h4>
+                                 <h4>{team.points} points {!team.paid && <Label bsStyle="danger">not paid</Label>}</h4>
                                 <ListGroup>
                                     {team.racers.map((racer, i) => [this.getRacer(racer), this.getRaces(racer)])}
                                 </ListGroup>
